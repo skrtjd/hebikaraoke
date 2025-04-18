@@ -1,33 +1,43 @@
-fetch("data/updates.json")
-  .then(response => response.json())
-  .then(renderUpdates)
-  .catch(error => console.error("업데이트 데이터를 불러오는 중 오류 발생:", error));
+function createTable(content) {
+  const table = document.createElement("table");
 
-function renderUpdates(updates) {
-  const container = document.getElementById("update-container");
-
-  updates.forEach(update => {
-    const section = document.createElement("section");
-    section.className = "update-block";
-    section.id = `update-${update.id}`;
-
-    const title = document.createElement("h2");
-    title.textContent = update.title;
-    section.appendChild(title);
-
-    const contentType = update.content.type;
-
-    if (contentType === "table") {
-      section.appendChild(createTable(update.content));
-    } else if (contentType === "text") {
-      section.appendChild(createParagraph(update.content.body));
-    } else if (contentType === "list") {
-      section.appendChild(createList(update.content.items));
-    }
-
-    container.appendChild(section);
+  const thead = document.createElement("thead");
+  const headerRow = document.createElement("tr");
+  content.headers.forEach(headerText => {
+    const th = document.createElement("th");
+    th.textContent = headerText;
+    headerRow.appendChild(th);
   });
+  thead.appendChild(headerRow);
+  table.appendChild(thead);
+
+  const tbody = document.createElement("tbody");
+  content.rows.forEach(rowData => {
+    const row = document.createElement("tr");
+    rowData.forEach(cellData => {
+      const td = document.createElement("td");
+      td.textContent = cellData;
+      row.appendChild(td);
+    });
+    tbody.appendChild(row);
+  });
+  table.appendChild(tbody);
+
+  return table;
 }
 
-// table 콘텐츠 생성
-function
+function createParagraph(text) {
+  const p = document.createElement("p");
+  p.textContent = text;
+  return p;
+}
+
+function createList(items) {
+  const ul = document.createElement("ul");
+  items.forEach(item => {
+    const li = document.createElement("li");
+    li.textContent = item;
+    ul.appendChild(li);
+  });
+  return ul;
+}
