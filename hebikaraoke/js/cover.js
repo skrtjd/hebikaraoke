@@ -5,11 +5,40 @@ function renderCoverSongs(songs) {
     const songBlock = document.createElement("section");
     songBlock.className = "cover-song";
 
+    // 유튜브 iframe
+    const iframe = document.createElement("iframe");
+    iframe.width = "560";
+    iframe.height = "315";
+    iframe.src = song.youtube;
+    iframe.frameBorder = "0";
+    iframe.allowFullscreen = true;
+
+    // 제목
+    const title = document.createElement("h2");
+    title.textContent = song.title;
+
+    // 공개일
+    const releaseDate = document.createElement("p");
+    releaseDate.innerHTML = `<strong>공개일:</strong> ${song.releaseDate}`;
+
+    // 노래방 번호
+    const karaoke = document.createElement("p");
+    karaoke.innerHTML = `
+      <strong>TJ:</strong> ${song.karaoke.TJ} |
+      <strong>KY:</strong> ${song.karaoke.KY} |
+      <strong>JS:</strong> ${song.karaoke.JS}
+    `;
+
+    // 가사 버튼
+    const button = document.createElement("button");
+    button.className = "toggle-lyrics";
+    button.textContent = "가사 보기";
+
+    // 가사 영역
     const lyricsPre = document.createElement("pre");
     lyricsPre.className = "lyrics";
     lyricsPre.style.display = "none";
 
-    // 가사 파일 불러오기
     fetch(song.lyricsPath)
       .then(res => res.text())
       .then(text => lyricsPre.textContent = text)
@@ -18,30 +47,20 @@ function renderCoverSongs(songs) {
         console.error("Lyrics load error:", err);
       });
 
-    songBlock.innerHTML = `
-      <iframe width="560" height="315" src="${song.youtube}" frameborder="0" allowfullscreen></iframe>
-      <h2>${song.title}</h2>
-      <p><strong>공개일:</strong> ${song.releaseDate}</p>
-      <p>
-        <strong>TJ:</strong> ${song.karaoke.TJ} |
-        <strong>KY:</strong> ${song.karaoke.KY} |
-        <strong>JS:</strong> ${song.karaoke.JS}
-      </p>
-      <button class="toggle-lyrics">가사 보기</button>
-    `;
+    // 버튼 기능
+    button.addEventListener("click", () => {
+      const isVisible = lyricsPre.style.display === "block";
+      lyricsPre.style.display = isVisible ? "none" : "block";
+      button.textContent = isVisible ? "가사 보기" : "가사 닫기";
+    });
+
+    // 순서대로 추가
+    songBlock.appendChild(iframe);
+    songBlock.appendChild(title);
+    songBlock.appendChild(releaseDate);
+    songBlock.appendChild(karaoke);
+    songBlock.appendChild(button);
     songBlock.appendChild(lyricsPre);
     container.appendChild(songBlock);
   });
-
-  // 버튼 이벤트는 DOM에 다 추가된 후에 설정
-  setTimeout(() => {
-    document.querySelectorAll(".toggle-lyrics").forEach(button =>
-      button.addEventListener("click", function () {
-        const lyrics = this.nextElementSibling;
-        const isVisible = lyrics.style.display === "block";
-        lyrics.style.display = isVisible ? "none" : "block";
-        this.textContent = isVisible ? "가사 보기" : "가사 닫기";
-      })
-    );
-  }, 100);
 }
