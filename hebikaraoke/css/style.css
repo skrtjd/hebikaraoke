@@ -1,0 +1,149 @@
+/* css/style.css */
+
+/* 공통 설정 */
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  padding: 20px;
+  margin: 0;
+  background-color: #fff;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 로고 */
+.logo img {
+  width: 400px;
+  height: 100px;
+  cursor: pointer;
+}
+
+/* 네비게이션 */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+nav a {
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+nav a:hover {
+  background-color: #f0f0f0;
+}
+
+/* 배너 */
+.banner img {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* 메인 콘텐츠 (index.html 전용) */
+.main-content {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.main-content h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.main-content p {
+  font-size: 18px;
+  color: #555;
+}
+
+.main-updates {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.main-updates h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.update-list li {
+  margin: 5px 0;
+}
+
+/* 테이블 스타일 */
+table {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+/* 커버곡 스타일 */
+.cover-song {
+  margin: 40px auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.cover-song iframe {
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+}
+
+.cover-song h2 {
+  margin: 10px 0;
+}
+
+.cover-song .toggle-lyrics {
+  margin-top: 10px;
+  padding: 6px 12px;
+  border: none;
+  background-color: #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cover-song .lyrics {
+  background-color: #f9f9f9;
+  padding: 10px;
+  white-space: pre-wrap;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+/* 업데이트 섹션 */
+.update-block {
+  margin: 40px auto;
+  max-width: 1000px;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  background-color: #fafafa;
+}
+
+.update-block h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
