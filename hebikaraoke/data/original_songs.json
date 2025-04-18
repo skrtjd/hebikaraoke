@@ -1,14 +1,27 @@
 [
   {
+    
     "order": 1,
     "title": "늘 (EVER)",
     "releaseDate": "2025-03-28",
     "youtube": "https://www.youtube.com/embed/_0f5FjEQzsg"
+    "karaoke": {
+      "TJ": "49045",
+      "KY": "X",
+      "JS": "X"
+    },
+    "lyrics": "여기에 늘(EVER) 가사 내용"
   },
   {
     "order": 2,
     "title": "지금부터(onward)",
     "releaseDate": "2025-04-22",
     "youtube": ""
+    "karaoke":{
+      "TJ": "X",
+      "KY": "X",
+      "JS": "X"
+    },
+    "lyrics": "여기에 지금부터(Onward) 가사 내용"
   }
 ]
