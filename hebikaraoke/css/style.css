@@ -194,3 +194,70 @@ th, td {
   margin-top: 6px;
   display: block;
 }
+
+.song-entry {
+  margin: 40px auto;
+  max-width: 1000px;
+}
+
+.song-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.song-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.song-table td {
+  vertical-align: top;
+  padding: 10px;
+}
+
+.info-cell {
+  width: 50%;
+}
+
+.video-cell {
+  width: 50%;
+  text-align: center;
+}
+
+.info-table {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+.info-table th,
+.info-table td {
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  text-align: left;
+}
+
+.toggle-lyrics {
+  margin-top: 10px;
+  padding: 6px 12px;
+  border: none;
+  background-color: #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.lyrics {
+  background-color: #f9f9f9;
+  padding: 10px;
+  white-space: pre-wrap;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.no-video {
+  color: #888;
+  font-style: italic;
+  padding: 20px;
+}
