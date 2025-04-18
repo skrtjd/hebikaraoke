@@ -147,3 +147,49 @@ th, td {
   font-size: 24px;
   margin-bottom: 15px;
 }
+/* 오리지널곡 테이블 스타일 */
+#original-song-container {
+  margin: 40px auto;
+  max-width: 1000px;
+  overflow-x: auto;
+}
+
+.song-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.song-table th, .song-table td {
+  border: 1px solid #ccc;
+  padding: 12px;
+}
+
+.song-table th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.song-table iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+.song-table .toggle-lyrics {
+  margin-top: 6px;
+  padding: 4px 10px;
+  border: none;
+  background-color: #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.song-table .lyrics {
+  background-color: #f9f9f9;
+  padding: 8px;
+  white-space: pre-wrap;
+  border-radius: 6px;
+  margin-top: 6px;
+  display: block;
+}
