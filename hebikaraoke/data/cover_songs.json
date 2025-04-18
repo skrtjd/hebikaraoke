@@ -8,7 +8,7 @@
       "KY": "X",
       "JS": "485729"
     },
-    "lyrics": "여기에 Henceforth 가사 내용"
+    "lyricsPath": "lyrics/cover/henceforth.txt"
   },
   {
     "title": "봄을 고하다(春を告げる)",
@@ -19,6 +19,6 @@
       "KY": "X",
       "JS": "449933"
     },
-    "lyrics": "여기에 봄을 고하다(春を告げる) 가사 내용"
+    "lyricsPath": "lyrics/cover/봄을 고하다(春を告げる).txt"
   }
 ]
