@@ -1,6 +1,5 @@
 [
   {
-    
     "order": 1,
     "title": "늘 (EVER)",
     "releaseDate": "2025-03-28",
@@ -10,18 +9,18 @@
       "KY": "X",
       "JS": "X"
     },
-    "lyrics": "여기에 늘(EVER) 가사 내용"
+    "lyricsFile": "lyrics/original/ever.txt"
   },
   {
     "order": 2,
     "title": "지금부터(onward)",
     "releaseDate": "2025-04-22",
     "youtube": "",
-    "karaoke":{
+    "karaoke": {
       "TJ": "X",
       "KY": "X",
       "JS": "X"
     },
-    "lyrics": "여기에 지금부터(Onward) 가사 내용"
+    "lyricsFile": "lyrics/original/onward.txt"
   }
 ]
