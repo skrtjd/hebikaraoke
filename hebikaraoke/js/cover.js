@@ -8,34 +8,55 @@ document.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById("coverList");
 
     songs.forEach(song => {
-      const songBlock = document.createElement("section");
-      songBlock.className = "cover-song";
+      const songSection = document.createElement("section");
+      songSection.className = "song-entry";
 
-      songBlock.innerHTML = `
-        <iframe width="560" height="315" src="${song.youtube}" frameborder="0" allowfullscreen></iframe>
-        <h2>${song.title}</h2>
-        <p><strong>공개일:</strong> ${song.releaseDate}</p>
-        <p>
-          <strong>TJ:</strong> ${song.karaoke.TJ} |
-          <strong>KY:</strong> ${song.karaoke.KY} |
-          <strong>JS:</strong> ${song.karaoke.JS}
-        </p>
-        <button class="toggle-lyrics">가사 보기</button>
-        <pre class="lyrics" style="display:none;">${song.lyrics}</pre>
+      songSection.innerHTML = `
+        <h2 class="song-title">${song.title}</h2>
+        <table class="song-table">
+          <tr>
+            <td class="info-cell">
+              <table class="info-table">
+                <tr>
+                  <th>TJ</th>
+                  <td>${song.karaoke.TJ}</td>
+                </tr>
+                <tr>
+                  <th>KY</th>
+                  <td>${song.karaoke.KY}</td>
+                </tr>
+                <tr>
+                  <th>JS</th>
+                  <td>${song.karaoke.JS}</td>
+                </tr>
+                <tr>
+                  <th>공개일</th>
+                  <td>${song.releaseDate}</td>
+                </tr>
+              </table>
+              <button class="toggle-lyrics">가사 보기</button>
+              <pre class="lyrics" style="display:none;">${song.lyrics}</pre>
+            </td>
+            <td class="video-cell">
+              ${
+                song.youtube
+                  ? `<iframe width="300" height="169" src="${song.youtube}" frameborder="0" allowfullscreen></iframe>`
+                  : `<div class="no-video">영상 없음</div>`
+              }
+            </td>
+          </tr>
+        </table>
       `;
-      container.appendChild(songBlock);
+      container.appendChild(songSection);
     });
 
     document.querySelectorAll(".toggle-lyrics").forEach(button =>
-      button.addEventListener("click", toggleLyrics)
+      button.addEventListener("click", function () {
+        const lyrics = this.nextElementSibling;
+        const isVisible = lyrics.style.display === "block";
+        lyrics.style.display = isVisible ? "none" : "block";
+        this.textContent = isVisible ? "가사 보기" : "가사 닫기";
+      })
     );
-  }
-
-  function toggleLyrics(event) {
-    const button = event.currentTarget;
-    const lyrics = button.nextElementSibling;
-    const isVisible = lyrics.style.display === "block";
-    lyrics.style.display = isVisible ? "none" : "block";
-    button.textContent = isVisible ? "가사 보기" : "가사 닫기";
   }
 });
