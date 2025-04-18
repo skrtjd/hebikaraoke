@@ -1,8 +1,13 @@
 fetch('data/original_songs.json')
   .then(response => response.json())
-  .then(data => renderOriginalSongs(data))
-  .catch(err => console.error("Original song data load error:", err));
-
+  .then(data => {
+    if (!Array.isArray(data)) throw new Error("데이터 형식 오류!");
+    renderOriginalSongs(data);
+  })
+  .catch(err => {
+    console.error("Original song data load error:", err);
+    alert("데이터를 불러오는 중 오류가 발생했습니다. 콘솔을 확인해주세요!");
+  });
 function renderOriginalSongs(songs) {
   const container = document.getElementById('original-song-container');
 
