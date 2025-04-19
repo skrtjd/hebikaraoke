@@ -281,3 +281,10 @@ th, td {
   border-left: 3px solid #ccc;
 }
 
+ruby {
+  font-size: 1.2em;
+}
+rt {
+  font-size: 0.6em;
+  color: #888;
+}
