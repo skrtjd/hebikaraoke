@@ -57,7 +57,7 @@ function renderCoverSongs(songs) {
       const isVisible = lyricsBox.style.display === "block";
 
       if (!isVisible && lyricsBox.textContent === "불러오는 중...") {
-        fetch(song.lyricsPath)
+        fetch(song.lyricsFile)
           .then(res => res.text())
           .then(text => {
             lyricsBox.textContent = text;
