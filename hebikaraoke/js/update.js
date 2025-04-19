@@ -41,3 +41,34 @@ function createList(items) {
   });
   return ul;
 }
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("data/updates.json")
+    .then(res => res.json())
+    .then(data => {
+      const container = document.getElementById("update-container");
+
+      data.forEach(update => {
+        const section = document.createElement("section");
+        section.id = update.id;
+
+        const title = document.createElement("h2");
+        title.textContent = update.title;
+        section.appendChild(title);
+
+        if (update.content.type === "table") {
+          section.appendChild(createTable(update.content));
+        } else if (update.content.type === "paragraph") {
+          section.appendChild(createParagraph(update.content.text));
+        } else if (update.content.type === "list") {
+          section.appendChild(createList(update.content.items));
+        }
+
+        container.appendChild(section);
+      });
+    })
+    .catch(err => {
+      console.error("업데이트 데이터를 불러오는 중 오류 발생:", err);
+      const container = document.getElementById("update-container");
+      container.textContent = "업데이트 정보를 불러오는 데 실패했습니다.";
+    });
+});
