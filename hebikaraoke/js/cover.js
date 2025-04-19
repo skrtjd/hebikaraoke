@@ -54,24 +54,22 @@ function renderCoverSongs(songs) {
     const lyricsBox = section.querySelector(".lyrics");
 
     toggleButton.addEventListener("click", () => {
-      if (lyricsBox.textContent === "불러오는 중...") {
-        fetch(song.lyricsFile)
-          .then(res => res.text())
-          .then(text => {
-            function convertRuby(text) {
-  return text.replace(/(\S+?)([\u3040-\u309F]+?)/g, '<ruby>$1<rt>$2</rt></ruby>');
-}
-            lyricsBox.style.display = "block";
-            toggleButton.textContent = "가사 닫기";
-          })
-          .catch(err => {
-            lyricsBox.textContent = "가사를 불러오는 데 실패했습니다.";
-          });
-      } else {
-        const isVisible = lyricsBox.style.display === "block";
-        lyricsBox.style.display = isVisible ? "none" : "block";
-        toggleButton.textContent = isVisible ? "가사 보기" : "가사 닫기";
-      }
-    });
+  if (lyricsBox.textContent === "불러오는 중...") {
+    fetch(song.lyricsFile)
+      .then(res => res.text())
+      .then(text => {
+        lyricsBox.innerHTML = convertRuby(text); // 여기가 핵심
+        lyricsBox.style.display = "block";
+        toggleButton.textContent = "가사 닫기";
+      })
+      .catch(err => {
+        lyricsBox.textContent = "가사를 불러오는 데 실패했습니다.";
+      });
+  } else {
+    const isVisible = lyricsBox.style.display === "block";
+    lyricsBox.style.display = isVisible ? "none" : "block";
+    toggleButton.textContent = isVisible ? "가사 보기" : "가사 닫기";
+  }
+});
   });
 }
