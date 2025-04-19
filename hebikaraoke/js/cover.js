@@ -1,3 +1,15 @@
+function parseRuby(text) {
+  return text
+    .split('\n')
+    .map(line =>
+      line.replace(
+        /([\u4E00-\u9FFF]+)([\u3040-\u309Fぁ-んー]+)/g,
+        '<ruby>$1<rt>$2</rt></ruby>'
+      )
+    )
+    .join('<br>');
+}
+
 fetch('data/cover_songs.json')
   .then(res => res.json())
   .then(data => {
@@ -20,8 +32,8 @@ function renderCoverSongs(songs) {
       <table class="song-table">
         <thead>
           <tr>
-            <th colspan="2" class="song-title">${song.title}</th>
-            <th class="song-date">공개일: ${song.releaseDate}</th>
+            <th colspan="2">${song.title}</th>
+            <th>공개일: ${song.releaseDate}</th>
           </tr>
         </thead>
         <tbody>
@@ -31,16 +43,16 @@ function renderCoverSongs(songs) {
                 ? `<iframe width="300" height="169" src="${song.youtube}" frameborder="0" allowfullscreen></iframe>`
                 : "영상 없음"}
             </td>
-            <td class="karaoke-label">TJ</td>
-            <td>${song.karaoke.TJ || "-"}</td>
+            <td>TJ</td>
+            <td>${song.karaoke.TJ}</td>
           </tr>
           <tr>
-            <td class="karaoke-label">KY</td>
-            <td>${song.karaoke.KY || "-"}</td>
+            <td>KY</td>
+            <td>${song.karaoke.KY}</td>
           </tr>
           <tr>
-            <td class="karaoke-label">JS</td>
-            <td>${song.karaoke.JS || "-"}</td>
+            <td>JS</td>
+            <td>${song.karaoke.JS}</td>
           </tr>
         </tbody>
       </table>
@@ -56,11 +68,11 @@ function renderCoverSongs(songs) {
     toggleButton.addEventListener("click", () => {
       const isVisible = lyricsBox.style.display === "block";
 
-      if (!isVisible && lyricsBox.textContent === "불러오는 중...") {
+      if (!isVisible && lyricsBox.innerHTML === "불러오는 중...") {
         fetch(song.lyricsFile)
           .then(res => res.text())
           .then(text => {
-            lyricsBox.textContent = text;
+            lyricsBox.innerHTML = parseRuby(text);
             lyricsBox.style.display = "block";
             toggleButton.textContent = "가사 닫기";
           })
