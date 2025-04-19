@@ -64,3 +64,15 @@ function renderCoverSongs(songs) {
     container.appendChild(songBlock);
   });
 }
+
+fetch('data/cover_songs.json')
+  .then(res => res.json())
+  .then(data => {
+    if (!Array.isArray(data)) throw new Error("데이터 형식 오류!");
+    renderCoverSongs(data);
+  })
+  .catch(err => {
+    console.error("Cover song data load error:", err);
+    alert("커버곡 데이터를 불러오는 중 오류가 발생했습니다. 콘솔을 확인해주세요!");
+  });
+
