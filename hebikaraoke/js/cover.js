@@ -58,7 +58,9 @@ function renderCoverSongs(songs) {
         fetch(song.lyricsFile)
           .then(res => res.text())
           .then(text => {
-            lyricsBox.textContent = text;
+            function convertRuby(text) {
+  return text.replace(/(\S+?)([\u3040-\u309F]+?)/g, '<ruby>$1<rt>$2</rt></ruby>');
+}
             lyricsBox.style.display = "block";
             toggleButton.textContent = "가사 닫기";
           })
