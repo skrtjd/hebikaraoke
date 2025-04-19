@@ -1,24 +1,26 @@
 [
   {
+    "order": 1,
     "title": "Henceforth",
-    "youtube": "https://www.youtube.com/embed/yXl5D2B8nKk",
     "releaseDate": "2020.06.10",
+    "youtube": "https://www.youtube.com/embed/yXl5D2B8nKk",
     "karaoke": {
       "TJ": "X",
       "KY": "X",
       "JS": "485729"
     },
-    "lyricsPath": "lyrics/cover/henceforth.txt"
+    "lyricsFile": "lyrics/cover/henceforth.txt"
   },
   {
+    "order": 2,
     "title": "봄을 고하다(春を告げる)",
-    "youtube": "https://www.youtube.com/embed/71gpWUEfH1Y",
     "releaseDate": "2020.06.30",
+    "youtube": "https://www.youtube.com/embed/71gpWUEfH1Y",
     "karaoke": {
       "TJ": "X",
       "KY": "X",
       "JS": "449933"
     },
-    "lyricsPath": "lyrics/cover/春を告げる.txt"
+    "lyricsFile": "lyrics/cover/haru_wo_tsugeru.txt"
   }
 ]
