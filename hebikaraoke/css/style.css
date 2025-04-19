@@ -261,3 +261,23 @@ th, td {
   font-style: italic;
   padding: 20px;
 }
+
+.update-header {
+  cursor: pointer;
+  background-color: #f0f0f0;
+  padding: 0.75em 1em;
+  margin: 1em 0 0.3em;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+.update-header:hover {
+  background-color: #e0e0e0;
+}
+.update-content {
+  margin-left: 1em;
+  padding: 0.5em 1em;
+  border-left: 3px solid #ccc;
+}
+
