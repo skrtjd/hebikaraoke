@@ -45,7 +45,7 @@ function renderCoverSongs(songs) {
         </tbody>
       </table>
       <button class="toggle-lyrics">가사 보기</button>
-      <div class="lyrics" style="display:none; white-space: pre-wrap;">불러오는 중...</pre>
+      <div class="lyrics" style="display:none; white-space: pre-wrap;">불러오는 중...</div>
     `;
 
     container.appendChild(section);
