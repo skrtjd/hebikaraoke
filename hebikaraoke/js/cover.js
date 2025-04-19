@@ -20,8 +20,8 @@ function renderCoverSongs(songs) {
       <table class="song-table">
         <thead>
           <tr>
-            <th colspan="2">${song.title}</th>
-            <th>공개일: ${song.releaseDate}</th>
+            <th colspan="2" class="song-title">${song.title}</th>
+            <th class="song-date">공개일: ${song.releaseDate}</th>
           </tr>
         </thead>
         <tbody>
@@ -31,21 +31,21 @@ function renderCoverSongs(songs) {
                 ? `<iframe width="300" height="169" src="${song.youtube}" frameborder="0" allowfullscreen></iframe>`
                 : "영상 없음"}
             </td>
-            <td>TJ</td>
-            <td>${song.karaoke.TJ}</td>
+            <td class="karaoke-label">TJ</td>
+            <td>${song.karaoke.TJ || "-"}</td>
           </tr>
           <tr>
-            <td>KY</td>
-            <td>${song.karaoke.KY}</td>
+            <td class="karaoke-label">KY</td>
+            <td>${song.karaoke.KY || "-"}</td>
           </tr>
           <tr>
-            <td>JS</td>
-            <td>${song.karaoke.JS}</td>
+            <td class="karaoke-label">JS</td>
+            <td>${song.karaoke.JS || "-"}</td>
           </tr>
         </tbody>
       </table>
       <button class="toggle-lyrics">가사 보기</button>
-      <div class="lyrics" style="display:none; white-space: pre-wrap;">불러오는 중...</div>
+      <pre class="lyrics" style="display:none; white-space: pre-wrap;">불러오는 중...</pre>
     `;
 
     container.appendChild(section);
@@ -54,22 +54,23 @@ function renderCoverSongs(songs) {
     const lyricsBox = section.querySelector(".lyrics");
 
     toggleButton.addEventListener("click", () => {
-  if (lyricsBox.textContent === "불러오는 중...") {
-    fetch(song.lyricsFile)
-      .then(res => res.text())
-      .then(text => {
-        lyricsBox.innerHTML = convertRuby(text); // 여기가 핵심
-        lyricsBox.style.display = "block";
-        toggleButton.textContent = "가사 닫기";
-      })
-      .catch(err => {
-        lyricsBox.textContent = "가사를 불러오는 데 실패했습니다.";
-      });
-  } else {
-    const isVisible = lyricsBox.style.display === "block";
-    lyricsBox.style.display = isVisible ? "none" : "block";
-    toggleButton.textContent = isVisible ? "가사 보기" : "가사 닫기";
-  }
-});
+      const isVisible = lyricsBox.style.display === "block";
+
+      if (!isVisible && lyricsBox.textContent === "불러오는 중...") {
+        fetch(song.lyricsPath)
+          .then(res => res.text())
+          .then(text => {
+            lyricsBox.textContent = text;
+            lyricsBox.style.display = "block";
+            toggleButton.textContent = "가사 닫기";
+          })
+          .catch(err => {
+            lyricsBox.textContent = "가사를 불러오는 데 실패했습니다.";
+          });
+      } else {
+        lyricsBox.style.display = isVisible ? "none" : "block";
+        toggleButton.textContent = isVisible ? "가사 보기" : "가사 닫기";
+      }
+    });
   });
 }
