@@ -55,7 +55,7 @@ function renderCoverSongs(songs) {
 
     toggleButton.addEventListener("click", () => {
       if (lyricsBox.textContent === "불러오는 중...") {
-        fetch(song.lyricsPath)
+        fetch(song.lyricsFile)
           .then(res => res.text())
           .then(text => {
             lyricsBox.textContent = text;
