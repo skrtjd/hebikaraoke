@@ -13,6 +13,18 @@
   },
   {
     "order": 2,
+    "title": "quiet room",
+    "releaseDate": "2020.06.28",
+    "youtube": "null",
+    "karaoke": {
+      "TJ": "X",
+      "KY": "X",
+      "JS": "423512"
+    },
+    "lyricsFile": "lyrics/cover/haru_wo_tsugeru.txt"
+  },
+  {
+    "order": 3,
     "title": "봄을 고하다(春を告げる)",
     "releaseDate": "2020.06.30",
     "youtube": "https://www.youtube.com/embed/71gpWUEfH1Y",
