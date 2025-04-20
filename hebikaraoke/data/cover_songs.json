@@ -46,6 +46,19 @@
       "JS": "446646"
     },
     "lyricsFile": "lyrics/cover/chocolatemilke.txt"
-  }
+  },
+{
+    "order": 5,
+    "title": "DAYBREAK FRONTLINE",
+    "releaseDate": "2020.08.22",
+    "youtube": "https://www.youtube.com/embed/0w6DwANxOWE",
+    "karaoke": {
+      "TJ": "X",
+      "KY": "X",
+      "JS": "702543(本人映像)\n691941(通常映像)\n972120(ボーカルアシスト)"
+    },
+    "lyricsFile": "lyrics/cover/haru_wo_tsugeru.txt"
+  },
+
 
 ]
