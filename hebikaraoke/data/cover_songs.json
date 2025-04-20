@@ -34,5 +34,18 @@
       "JS": "449933"
     },
     "lyricsFile": "lyrics/cover/haru_wo_tsugeru.txt"
+  },
+{
+    "order": 4,
+    "title": "초콜릿 밀크(チョコレートミルク)",
+    "releaseDate": "2020.07.11",
+    "youtube": "",
+    "karaoke": {
+      "TJ": "X",
+      "KY": "X",
+      "JS": "446646"
+    },
+    "lyricsFile": "lyrics/cover/chocolatemilke.txt"
   }
+
 ]
