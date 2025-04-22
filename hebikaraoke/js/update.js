@@ -28,7 +28,7 @@ function createTable(content) {
 
 function getEmojiFromTitle(title) {
   const lowerTitle = title.toLowerCase();
-  if (lowerTitle.includes("노래") || lowerTitle.includes("곡") || lowerTitle.includes("음원")) return "🎵";
+  if (lowerTitle.includes("노래") || lowerTitle.includes("곡") || lowerTitle.includes("목록")) return "🎵";
   if (lowerTitle.includes("ui") || lowerTitle.includes("디자인") || lowerTitle.includes("레이아웃") || lowerTitle.includes("사이트")) return "🛠️";
   if (lowerTitle.includes("버그") || lowerTitle.includes("오류") || lowerTitle.includes("수정")) return "🐞";
   if (lowerTitle.includes("추가") || lowerTitle.includes("신규") || lowerTitle.includes("새로운")) return "✨";
