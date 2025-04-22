@@ -6,7 +6,8 @@ const updates = [
   },
   {
     id: 20250422,
-    title: "2025년 4월 22일: "
+    title: "2025년 4월 22일 Hebi 신곡 업데이트",
+    content: "2025년 04월 22일: Hebi ORIGINAL 목록에 '지금부터(Onward)', 'Sketch' 업데이트 되었습니다. "
 ];
 
 // 업데이트 페이지 내 전체 리스트용
