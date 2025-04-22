@@ -317,3 +317,8 @@ rt {
   margin: 0 auto;
   display: block;
 }
+
+.lyrics-button-container {
+  text-align: center;
+  margin-top: 10px;
+}
