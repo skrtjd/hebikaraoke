@@ -22,5 +22,17 @@
       "JS": "X"
     },
     "lyricsFile": "lyrics/original/onward.txt"
+  },
+  {
+    "order": 3,
+    "title": "Sketch",
+    "releaseDate": "2025-04-22",
+    "youtube": "",
+    "karaoke": {
+      "TJ": "X",
+      "KY": "X",
+      "JS": "X"
+    },
+    "lyricsFile": "lyrics/original/Sketch.txt"
   }
 ]
