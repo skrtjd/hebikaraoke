@@ -251,6 +251,7 @@ th, td {
 .lyrics {
   font-size: 14px;
   background-color: #f9f9f9;
+  text-align: center;
   padding: 6px;
   white-space: pre-wrap;
   border-radius: 6px;
