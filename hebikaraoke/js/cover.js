@@ -56,7 +56,10 @@ function renderCoverSongs(songs) {
           </tr>
         </tbody>
       </table>
-      <button class="toggle-lyrics">가사 보기</button>
+      <div class="lyrics-button-container">
+  <button class="toggle-lyrics">가사 보기</button>
+</div>
+
       <div class="lyrics" style="display:none; white-space: pre-wrap;">불러오는 중...</div>
     `;
 
