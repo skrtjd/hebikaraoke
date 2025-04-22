@@ -337,3 +337,10 @@ rt {
   overflow-x: auto;
   border-left: 4px solid #ccc;
 }
+
+.lyrics-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
