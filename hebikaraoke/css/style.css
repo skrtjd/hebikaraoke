@@ -1,169 +1,49 @@
-/* css/style.css */
-
-/* 공통 설정 */
-body {
-  font-family: 'Noto Sans KR', sans-serif;
-  padding: 20px;
-  margin: 0;
-  background-color: #fff;
-  color: #333;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* 로고 */
-.logo img {
-  width: 100px;
-  height: 100px;
-  cursor: pointer;
-}
-
-/* 네비게이션 */
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin: 20px 0;
-  font-weight: bold;
-}
-
-nav a {
-  padding: 8px 16px;
-  border-radius: 8px;
-  transition: background 0.2s;
-}
-
-nav a:hover {
-  background-color: #f0f0f0;
-}
-
-/* 배너 */
-.banner img {
-  width: 100%;
-  max-width: 1200px;
-  height: auto;
-  user-select: none;
-  pointer-events: none;
-}
-
-/* 메인 콘텐츠 (index.html 전용) */
-.main-content {
+/* 통합된 가사 박스 스타일 */
+.lyrics {
+  font-family: 'Noto Sans KR', 'Noto Sans JP', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #f9f9f9;
   text-align: center;
-  margin-top: 40px;
-}
-
-.main-content h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-.main-content p {
-  font-size: 18px;
-  color: #555;
-}
-
-.main-updates {
-  margin-top: 50px;
-  text-align: center;
-}
-
-.main-updates h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-.update-list li {
-  margin: 5px 0;
-}
-
-/* 테이블 스타일 */
-table {
-  width: 100%;
-  max-width: 1000px;
-  margin: 20px auto;
-  border-collapse: collapse;
-}
-
-th, td {
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: center;
-}
-
-/* 커버곡 스타일 */
-.cover-song {
-  margin: 40px auto;
-  max-width: 800px;
-  text-align: center;
-}
-
-.cover-song iframe {
-  width: 100%;
-  max-width: 560px;
-  height: 315px;
-}
-
-.cover-song h2 {
-  margin: 10px 0;
-}
-
-.cover-song .toggle-lyrics {
+  padding: 15px;
+  white-space: pre-wrap;
+  border-radius: 10px;
   margin-top: 10px;
+  overflow-x: auto;
+  border-left: 4px solid #ccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 가사 버튼 컨테이너 */
+.lyrics-button-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* 가사 보기/닫기 버튼 */
+.toggle-lyrics {
   padding: 6px 12px;
   border: none;
   background-color: #ddd;
   border-radius: 6px;
   cursor: pointer;
+  font-size: 0.9em;
 }
 
-.cover-song .lyrics {
-  background-color: #f9f9f9;
-  padding: 10px;
-  white-space: pre-wrap;
-  border-radius: 6px;
-  margin-top: 10px;
-}
-
-/* 업데이트 섹션 */
-.update-block {
-  margin: 40px auto;
-  max-width: 1000px;
-  padding: 20px;
-  border: 1px solid #eee;
-  border-radius: 10px;
-  background-color: #fafafa;
-}
-
-.update-block h2 {
-  font-size: 24px;
-  margin-bottom: 15px;
-}
-
-/* 오리지널곡 테이블 스타일 */
-#original-song-container {
-  margin: 40px auto;
-  max-width: 1000px;
-  overflow-x: auto;
-}
-
+/* 커버/오리지널 공통 테이블 */
 .song-table {
   width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
   border-collapse: collapse;
   text-align: center;
 }
 
-.song-table th, .song-table td {
+.song-table th,
+.song-table td {
   border: 1px solid #ccc;
   padding: 12px;
+  vertical-align: top;
 }
 
 .song-table th {
@@ -176,190 +56,21 @@ th, td {
   height: auto;
 }
 
-.song-table .toggle-lyrics {
-  margin-top: 6px;
-  padding: 4px 10px;
-  border: none;
-  background-color: #ddd;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 0.9em;
-}
-
-.song-table .lyrics {
-  background-color: #f9f9f9;
-  padding: 8px;
-  white-space: pre-wrap;
-  border-radius: 6px;
-  margin-top: 6px;
-  display: block;
-}
-
-.song-entry {
-  margin: 40px auto;
-  max-width: 1000px;
-}
-
-.song-title {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.song-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.song-table td {
-  vertical-align: top;
-  padding: 10px;
-}
-
-.info-cell {
-  width: 50%;
-}
-
-.video-cell {
-  width: 50%;
-  text-align: center;
-}
-
-.info-table {
-  width: 100%;
-  border: 1px solid #ccc;
-  border-collapse: collapse;
-  margin-bottom: 10px;
-}
-
-.info-table th,
-.info-table td {
-  border: 1px solid #ccc;
-  padding: 6px 10px;
-  text-align: left;
-}
-
-.toggle-lyrics {
-  margin-top: 10px;
-  padding: 6px 12px;
-  border: none;
-  background-color: #ddd;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.lyrics {
-  font-size: 14px;
-  background-color: #f9f9f9;
-  text-align: center;
-  padding: 6px;
-  white-space: pre-wrap;
-  border-radius: 6px;
-  margin-top: 5px;
-}
-
+/* 영상 없을 때 */
 .no-video {
   color: #888;
   font-style: italic;
   padding: 20px;
 }
 
-.update-header {
-  cursor: pointer;
-  background-color: #f0f0f0;
-  padding: 0.75em 1em;
-  margin: 1em 0 0.3em;
-  border-radius: 8px;
-  font-size: 1.1em;
-  font-weight: bold;
-  transition: background-color 0.2s ease;
-}
-.update-header:hover {
-  background-color: #e0e0e0;
-}
-.update-content {
-  margin-left: 1em;
-  padding: 0.5em 1em;
-  border-left: 3px solid #ccc;
-}
-
+/* ruby 태그 */
 ruby {
   font-size: 1rem;
-  ruby-position: over; /* 대부분 브라우저에서 기본값 */
+  ruby-position: over;
 }
 
 rt {
   font-size: 0.6em;
   color: #666;
   font-weight: normal;
-}
-
-/* 가사 박스 스타일 (선택적으로 더 꾸미고 싶다면) */
-.lyrics {
-  margin-top: 5px;
-  padding: 6px;
-  background-color: #f9f9f9;
-  border-left: 4px solid #ccc;
-  font-family: "Noto Sans JP", sans-serif;
-  line-height: 1.0;
-  white-space: pre-wrap;
-  overflow-x: auto;
-}
-
-.banner {
-  width: 100%;
-  text-align: center;
-}
-
-.banner img {
-  max-width: 1200px;
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-  display: block;
-}
-
-.lyrics-button-container {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.lyrics {
-  font-family: 'Noto Sans KR', 'Noto Sans JP', sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  background-color: #f9f9f9;
-  text-align: center;
-  padding: 10px;
-  white-space: pre-wrap;
-  border-radius: 6px;
-  margin-top: 10px;
-  overflow-x: auto;
-  border-left: 4px solid #ccc;
-}
-
-.lyrics-wrapper {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.bilibili-link {
-  display: inline-block;
-  padding: 6px 10px;
-  background-color: #ff5c5c;
-  color: white;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 14px;
-  margin-top: 10px;
-}
-
-.lyrics {
-  margin-top: 10px;
-  background-color: #f9f9f9;
-  padding: 15px;
-  border-radius: 10px;
-  line-height: 1.6;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
