@@ -344,3 +344,22 @@ rt {
   text-align: center;
 }
 
+.bilibili-link {
+  display: inline-block;
+  padding: 6px 10px;
+  background-color: #ff5c5c;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.lyrics {
+  margin-top: 10px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  line-height: 1.6;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
