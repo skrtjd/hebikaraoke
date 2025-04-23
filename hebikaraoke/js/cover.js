@@ -18,7 +18,7 @@ fetch('data/cover_songs.json')
   })
   .catch(err => {
     console.error("Cover song data load error:", err);
-    alert("데이터를 불러오는 중 오류가 발생했습니다. 콘솔을 확인해주세요!");
+    alert("데이터를 불러오는 중 오류가 발생했습니다.");
   });
 
 function renderCoverSongs(songs) {
@@ -27,6 +27,13 @@ function renderCoverSongs(songs) {
   songs.forEach(song => {
     const section = document.createElement("section");
     section.className = "song-block";
+
+    let videoContent = "영상 없음";
+    if (song.youtube) {
+      videoContent = `<iframe width="300" height="169" src="${song.youtube}" frameborder="0" allowfullscreen></iframe>`;
+    } else if (song.bilibili) {
+      videoContent = `<a class="bilibili-link" href="${song.bilibili}" target="_blank">▶ bilibili에서 보기</a>`;
+    }
 
     section.innerHTML = `
       <table class="song-table">
@@ -38,11 +45,7 @@ function renderCoverSongs(songs) {
         </thead>
         <tbody>
           <tr>
-            <td rowspan="3" class="video-cell">
-              ${song.youtube
-                ? `<iframe width="300" height="169" src="${song.youtube}" frameborder="0" allowfullscreen></iframe>`
-                : "영상 없음"}
-            </td>
+            <td rowspan="3" class="video-cell">${videoContent}</td>
             <td>TJ</td>
             <td>${song.karaoke.TJ}</td>
           </tr>
@@ -57,16 +60,20 @@ function renderCoverSongs(songs) {
         </tbody>
       </table>
       <div class="lyrics-button-container">
-  <button class="toggle-lyrics">가사 보기</button>
-</div>
-
-      <div class="lyrics" style="display:none; white-space: pre-wrap;">불러오는 중...</div>
+        <button class="toggle-lyrics">가사 보기</button>
+      </div>
+      <div class="lyrics">불러오는 중...</div>
     `;
 
     container.appendChild(section);
 
     const toggleButton = section.querySelector(".toggle-lyrics");
     const lyricsBox = section.querySelector(".lyrics");
+
+    lyricsBox.style.display = "none";
+    lyricsBox.style.whiteSpace = "pre-wrap";
+    lyricsBox.style.textAlign = "center";
+    lyricsBox.style.fontSize = "16px";
 
     toggleButton.addEventListener("click", () => {
       const isVisible = lyricsBox.style.display === "block";
@@ -79,7 +86,7 @@ function renderCoverSongs(songs) {
             lyricsBox.style.display = "block";
             toggleButton.textContent = "가사 닫기";
           })
-          .catch(err => {
+          .catch(() => {
             lyricsBox.textContent = "가사를 불러오는 데 실패했습니다.";
           });
       } else {
