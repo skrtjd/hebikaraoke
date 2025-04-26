@@ -58,6 +58,18 @@
       "JS": "691941"
     },
     "lyricsFile": "lyrics/cover/daybreak_frontline.txt"
+  },
+{
+    "order": 6,
+    "title": "第六感 REMIX",
+    "releaseDate": "2020.09.06",
+"youtube":"https://www.youtube.com/embed/lZKV0ilNXCc",
+    "karaoke": {
+      "TJ": "68302",
+      "KY": "44607",
+      "JS": "716401"
+    },
+    "lyricsFile": "lyrics/cover/The_Sixth_Sence.txt"
   }
 
 
