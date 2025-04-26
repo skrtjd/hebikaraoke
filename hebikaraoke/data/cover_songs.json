@@ -70,6 +70,18 @@
       "JS": "716401"
     },
     "lyricsFile": "lyrics/cover/The_Sixth_Sence.txt"
+  },
+{
+    "order": 7,
+    "title": "진흙 속에 피다(泥中に咲く)",
+    "releaseDate": "2020.09.24",
+"youtube":"https://www.youtube.com/embed/7XaLMxc62NQ",
+    "karaoke": {
+      "TJ": "68126",
+      "KY": "X",
+      "JS": "435373"
+    },
+    "lyricsFile": "lyrics/cover/Blooming_in_the_Mud.txt"
   }
 
 
