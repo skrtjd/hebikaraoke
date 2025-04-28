@@ -82,7 +82,19 @@
       "JS": "435373"
     },
     "lyricsFile": "lyrics/cover/Blooming_in_the_Mud.txt"
-  }
+},
+  {
+    "order": 8,
+    "title": "날이 개길 기다려(霽れを待つ)",
+    "releaseDate": "2021.03.07",
+"youtube":"https://www.youtube.com/embed/ZPgGq1OFhPU",
+    "karaoke": {
+      "TJ": "X",
+      "KY": "X",
+      "JS": "489757"
+    },
+    "lyricsFile": "lyrics/cover/Awaiting_Clear_Skies.txt"
+  },
 
 
 ]
