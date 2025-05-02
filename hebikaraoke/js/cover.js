@@ -33,6 +33,15 @@ function renderCoverSongs(songs) {
       videoContent = `<iframe width="300" height="169" src="${song.youtube}" frameborder="0" allowfullscreen></iframe>`;
     } else if (song.bilibili) {
       videoContent = `<a class="bilibili-link" href="${song.bilibili}" target="_blank">▶ bilibili에서 보기</a>`;
+    } else if (song.niconico) {
+      // nico.ms/sm39314857 → embed.nicovideo.jp/watch/sm39314857
+      const match = song.niconico.match(/(?:nico\.ms|nicovideo\.jp\/watch)\/(sm\d+)/);
+      if (match) {
+        const embedUrl = `https://embed.nicovideo.jp/watch/${match[1]}`;
+        videoContent = `<iframe width="300" height="169" src="${embedUrl}" frameborder="0" allowfullscreen></iframe>`;
+      } else {
+        videoContent = `<a class="niconico-link" href="${song.niconico}" target="_blank">▶ 니코니코에서 보기</a>`;
+      }
     }
 
     section.innerHTML = `
