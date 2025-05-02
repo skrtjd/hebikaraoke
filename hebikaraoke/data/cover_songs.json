@@ -131,6 +131,19 @@
       "JS": "491713"
     },
     "lyricsFile": "lyrics/cover/Shutter.txt"
+  },
+
+{
+    "order": 12,
+    "title": "내일의 밤하늘 초계반(アスノヨゾラ哨戒班)",
+    "releaseDate": "2025.02.11",
+"youtube":"https://www.youtube.com/embed/gMjU5XJnc7E",
+    "karaoke": {
+      "TJ": "27984",
+      "KY": "44091",
+      "JS": "669759"
+    },
+    "lyricsFile": "lyrics/cover/Night_Sky_Patrol_of_Tomorrow.txt"
   }
 
 ]
