@@ -118,6 +118,19 @@
       "JS": "449719"
     },
     "lyricsFile": "lyrics/cover/Darken.txt"
+  },
+
+{
+    "order": 11,
+    "title": "셔터(シャッター)",
+    "releaseDate": "2021.09.10",
+"":"",
+    "karaoke": {
+      "TJ": "",
+      "KY": "",
+      "JS": "491713"
+    },
+    "lyricsFile": "lyrics/cover/Shutter.txt"
   }
 
 ]
