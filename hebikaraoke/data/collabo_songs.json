@@ -10,5 +10,17 @@
       "JS":"X"
     },
     "lyricsFile": "lyrics/collabo/hope_of_flower.txt"
+  },
+{
+    "order": 2,
+    "title": "낙인",
+    "releaseDate": "2025.07.29",
+"youtube":"https://www.youtube.com/embed/3KwLAoWdJWc",
+    "karaoke": {
+      "TJ": "50245",
+      "KY": "X",
+      "JS": "X"
+    },
+    "lyricsFile": "lyrics/collabo/stigma.txt"
   }
 ]
