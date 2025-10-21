@@ -34,5 +34,16 @@
       "JS": "X"
     },
     "lyricsFile": "lyrics/original/Sketch.txt"
-  }
+  },
+  {
+    "order": 4,
+    "title": "Be I",
+    "releaseDate": "2025-10-20",
+    "youtube": "https://youtube.com/embed/UOlTw3gZuCo",
+    "karaoke": {
+      "TJ": "50804",
+      "KY": "X",
+      "JS": "X"
+    },
+    "lyricsFile": "lyrics/original/Be_I.txt
 ]
