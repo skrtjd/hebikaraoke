@@ -46,5 +46,17 @@
       "JS": "X"
     },
     "lyricsFile": "lyrics/original/Be_I.txt"
+},
+{
+    "order": 5,
+    "title": "오버클럭(OVERCLOCK)",
+    "releaseDate": "2025-10-20",
+    "youtube": "https://youtube.com/embed/arRBjV-PRMk",
+    "karaoke": {
+      "TJ": "50877",
+      "KY": "X",
+      "JS": "X"
+    },
+    "lyricsFile": "lyrics/original/OVERCLOCK.txt"
 }
 ]
