@@ -6,8 +6,7 @@
     "youtube": "https://www.youtube.com/embed/_0f5FjEQzsg",
     "karaoke": {
       "TJ": "49045<br><span style='color:green;'>64478</span>",
-      "KY": "50175",
-      "JS": "X"
+      "KY": "50175"
     },
     "lyricsFile": "lyrics/original/ever.txt"
   },
@@ -18,8 +17,7 @@
     "youtube": "https://youtube.com/embed/yomKWG44odg",
     "karaoke": {
       "TJ": "87519<br><span style='color:green;'>64490</span>",
-      "KY": "50188",
-      "JS": "X"
+      "KY": "50188"
     },
     "lyricsFile": "lyrics/original/onward.txt"
   },
@@ -30,8 +28,7 @@
     "youtube": "https://www.youtube.com/embed/cF6AjcJPmLE",
     "karaoke": {
       "TJ": "87528",
-      "KY": "X",
-      "JS": "X"
+      "KY": "X"
     },
     "lyricsFile": "lyrics/original/Sketch.txt"
   },
@@ -42,8 +39,7 @@
     "youtube": "https://youtube.com/embed/UOlTw3gZuCo",
     "karaoke": {
       "TJ": "50804",
-      "KY": "50503",
-      "JS": "X"
+      "KY": "50503"
     },
     "lyricsFile": "lyrics/original/Be_I.txt"
 },
@@ -54,8 +50,7 @@
     "youtube": "https://youtube.com/embed/arRBjV-PRMk",
     "karaoke": {
       "TJ": "50877",
-      "KY": "X",
-      "JS": "X"
+      "KY": "X"
     },
     "lyricsFile": "lyrics/original/OVERCLOCK.txt"
 },{
@@ -65,8 +60,7 @@
     "youtube": "https://youtube.com/embed/kAb9_6DVwnQ",
     "karaoke": {
       "TJ": "50891",
-      "KY": "50528",
-      "JS": "X"
+      "KY": "50528"
     },
     "lyricsFile": "lyrics/original/Gravity_in_the_Wind.txt"
 },{
@@ -76,11 +70,11 @@
     "youtube": "https://youtube.com/embed/87Impwz_sQ4",
     "karaoke": {
       "TJ": "50998",
-      "KY": "X",
-      "JS": "X"
+      "KY": "X"
     },
     "lyricsFile": "lyrics/original/Wake_Slow.txt"
 }
 ]
+
 
 
