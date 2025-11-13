@@ -38,10 +38,6 @@ function renderOriginalSongs(songs) {
             <td>KY</td>
             <td>${song.karaoke.KY}</td>
           </tr>
-          <tr>
-            <td>JS</td>
-            <td>${song.karaoke.JS}</td>
-          </tr>
         </tbody>
       </table>
       <div class="lyrics-button-container">
@@ -76,3 +72,4 @@ function renderOriginalSongs(songs) {
     });
   });
 }
+
