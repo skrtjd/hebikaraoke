@@ -22,5 +22,17 @@
       "JS": "X"
     },
     "lyricsFile": "lyrics/collabo/stigma.txt"
+  },
+{
+    "order": 3,
+    "title": "Crossing Stars",
+    "releaseDate": "2026-01-26",
+"youtube":"https://www.youtube.com/embed/XBi0zP0hLZQ",
+    "karaoke": {
+      "TJ": "X",
+      "KY": "X",
+      "JS": "X"
+    },
+    "lyricsFile": "lyrics/collabo/Crossing_Stars.txt"
   }
 ]
