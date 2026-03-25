@@ -44,7 +44,7 @@
     "lyricsFile": "lyrics/original/Be_I.txt"
 },
 {
-    "order": 5,
+    "order": 4,
     "title": "오버클럭(OVERCLOCK)",
     "releaseDate": "2025-10-20",
     "youtube": "https://youtube.com/embed/arRBjV-PRMk",
@@ -54,7 +54,7 @@
     },
     "lyricsFile": "lyrics/original/OVERCLOCK.txt"
 },{
-    "order": 6,
+    "order": 5,
     "title": "하강기류(Gravity in the Wind)",
     "releaseDate": "2025-10-20",
     "youtube": "https://youtube.com/embed/kAb9_6DVwnQ",
@@ -64,8 +64,30 @@
     },
     "lyricsFile": "lyrics/original/Gravity_in_the_Wind.txt"
 },
-{
+  {
+    "order": 6,
+    "title": "She",
+    "releaseDate": "2025-10-20",
+    "youtube": "https://youtube.com/embed/rJPyUL5BjGM",
+    "karaoke": {
+      "TJ": "51863",
+      "KY": "X"
+    },
+    "lyricsFile": "lyrics/original/She.txt"
+},
+  {
     "order": 7,
+    "title": "Be I",
+    "releaseDate": "2025-10-20",
+    "youtube": "https://youtube.com/embed/UOlTw3gZuCo",
+    "karaoke": {
+      "TJ": "50804",
+      "KY": "50503"
+    },
+    "lyricsFile": "lyrics/original/Be_I.txt"
+},
+{
+    "order": 8,
     "title": "Wake Slow",
     "releaseDate": "2025-10-20",
     "youtube": "https://youtube.com/embed/87Impwz_sQ4",
@@ -76,7 +98,7 @@
     "lyricsFile": "lyrics/original/Wake_Slow.txt"
 },
 {
-    "order": 8,
+    "order": 9,
     "title": "Become",
     "releaseDate": "2026-01-22",
     "youtube": "https://youtube.com/embed/XPqXU3SfxdU",
